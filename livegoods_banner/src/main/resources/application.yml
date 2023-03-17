@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: livegoods-banner
+  profiles:
+    active: mongo
+server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      -defaultZone:
+        - http://192.168.0.3:8761/eureka
