@@ -13,6 +13,7 @@
         <module>livegoods_eureka</module>
         <module>livegoods_banner</module>
         <module>livegoods_commons</module>
+        <module>livegoods_gateway</module>
     </modules>
 
     <properties>
