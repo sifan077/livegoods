@@ -14,6 +14,10 @@ spring:
           uri: lb://livegoods-banner
           predicates:
             - Path=/banner
+        - id: hotproduct
+          uri: lb://livegoods-hotProduct
+          predicates:
+            - Path=/hotProduct
 eureka:
   client:
     service-url:
