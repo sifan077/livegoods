@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: livegoods-recommendation
+  profiles:
+    active: mongo
+
+server:
+  port: 8083
+eureka:
+  client:
+    service-url:
+      defaultZone: http://192.168.0.3:8761/eureka/
+  instance:
+    prefer-ip-address: true

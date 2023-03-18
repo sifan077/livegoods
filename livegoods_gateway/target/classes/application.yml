@@ -18,6 +18,12 @@ spring:
           uri: lb://livegoods-hotProduct
           predicates:
             - Path=/hotProduct
+            - Query=city # 请求中必须包含city参数，参数内容不限
+        - id: recommendation
+          uri: lb://livegoods-recommendation
+          predicates:
+            - Path=/recommendation
+            - Query=city
 eureka:
   client:
     service-url:
