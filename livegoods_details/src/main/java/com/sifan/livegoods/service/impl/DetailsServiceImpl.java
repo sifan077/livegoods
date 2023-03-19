@@ -4,6 +4,7 @@ import com.sifan.livegoods.dao.ItemDao;
 import com.sifan.livegoods.pojo.Item;
 import com.sifan.livegoods.service.DetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 // 商品详情服务实现
@@ -20,6 +21,7 @@ public class DetailsServiceImpl implements DetailsService {
      * @return
      */
     @Override
+    @Cacheable(cacheNames = "com:livegoods:details", key = "'getDetails('+#id+')'")
     public Item getDetails(String id) {
         // 主键查询
         return itemDao.findItemById(id);
