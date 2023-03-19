@@ -17,6 +17,7 @@
         <module>livegoods_product</module>
         <module>livegoods_recommedation</module>
         <module>livegoods_search</module>
+        <module>livegoods_details</module>
     </modules>
 
     <properties>
