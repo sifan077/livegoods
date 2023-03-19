@@ -24,6 +24,14 @@ spring:
           predicates:
             - Path=/recommendation
             - Query=city
+        - id: search
+          uri: lb://livegoods-search
+          predicates:
+            - Path=/search
+            - Query=city
+            - Query=page
+            - Query=content
+
 eureka:
   client:
     service-url:

@@ -28,6 +28,9 @@ public class LivegoodsResult {
     // 返回的数据； 热销商品使用，返回查询的热销商品集合；热门推荐使用；
     private Object data;
 
+    // 是否还有更多数据
+    private Boolean hasMore;
+
     public static LivegoodsResult ok() {
         LivegoodsResult result = new LivegoodsResult();
         result.setStatus(200);

@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="livegoods_recommedation" />
+        <module name="livegoods_search" />
         <module name="livegoods_banner" />
         <module name="livegoods_mongodb_dao" />
         <module name="livegoods_pojo" />
