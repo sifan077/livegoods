@@ -1,0 +1,6 @@
+livegoods:
+  rabbit:
+    buy:
+      exchange: livegoods-buyaction-ex
+      queue: livegoods-buyaction-queue
+      routingKey: rk-buyaction

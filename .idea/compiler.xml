@@ -12,10 +12,13 @@
         <module name="livegoods_banner" />
         <module name="livegoods_comment" />
         <module name="livegoods_cache_redis" />
+        <module name="livegoods_buyaction_message_consumer" />
+        <module name="livegoods_rabbit_publisher" />
         <module name="livegoods_product" />
         <module name="livegoods_eureka" />
         <module name="livegoods_gateway" />
         <module name="livegoods_recommedation" />
+        <module name="livegoods_buytime" />
         <module name="livegoods_details" />
         <module name="livegoods_buyaction" />
         <module name="livegoods_mongodb_dao" />
@@ -23,5 +26,8 @@
         <module name="livegoods_commons" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="livegoods_order" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

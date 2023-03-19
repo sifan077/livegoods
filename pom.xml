@@ -19,9 +19,12 @@
         <module>livegoods_search</module>
         <module>livegoods_details</module>
         <module>livegoods_cache_redis</module>
+        <module>livegoods_buytime</module>
         <module>livegoods_comment</module>
-        <module>livegoods_buyaction</module>
         <module>livegoods_login</module>
+        <module>livegoods_rabbit_publisher</module>
+        <module>livegoods_buyaction</module>
+        <module>livegoods_buyaction_message_consumer</module>
     </modules>
 
     <properties>

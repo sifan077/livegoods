@@ -43,7 +43,7 @@ spring:
             - Query=id
             - Query=page
         - id: buytime
-          uri: lb://livegoods-buyaction
+          uri: lb://livegoods-buytime
           predicates:
             - Path=/buytime
             - Query=id
@@ -55,6 +55,11 @@ spring:
           uri: lb://livegoods-login
           predicates:
             - Path=/login
+        - id: buyaction
+          uri: lb://livegoods-buyaction
+          predicates:
+            - Path=/buyaction
+
 
 
 eureka:
