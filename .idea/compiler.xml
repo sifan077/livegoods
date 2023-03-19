@@ -11,6 +11,7 @@
         <module name="livegoods_search" />
         <module name="livegoods_details" />
         <module name="livegoods_banner" />
+        <module name="livegoods_comment" />
         <module name="livegoods_mongodb_dao" />
         <module name="livegoods_cache_redis" />
         <module name="livegoods_pojo" />
