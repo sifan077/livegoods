@@ -34,7 +34,7 @@ public class TestSearch {
             i.setId(item.getId());
             i.setTitle(item.getTitle());
             i.setCity(item.getCity());
-            i.setHouseType(item.getHouseType4Search());
+//            i.setHouseType(item.getHouseType4Search());
             i.setImg(item.getImg());
             i.setPrice("<h3>" + item.getPrice() + "</h3>");
             i.setRentType(item.getRentType());

@@ -20,6 +20,7 @@
         <module>livegoods_details</module>
         <module>livegoods_cache_redis</module>
         <module>livegoods_comment</module>
+        <module>livegoods_buyaction</module>
     </modules>
 
     <properties>

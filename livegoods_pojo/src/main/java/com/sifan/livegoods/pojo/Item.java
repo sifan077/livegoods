@@ -4,6 +4,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -30,6 +31,15 @@ public class Item {
     private String houseType;// 房屋面积，字符串
     private Map<String, String> info;// 房屋特性， Map集合。集合存储数据内容为： years: "建造年份", type: "房屋类型，几室几厅", level: "所在楼层", style: "装修标准", orientation: "房屋朝向"
     private List<String> imgs;// 图片集合。字符串数组或集合
+    private Date buytime;
+
+    public Date getBuytime() {
+        return buytime;
+    }
+
+    public void setBuytime(Date buytime) {
+        this.buytime = buytime;
+    }
 
     public String getId() {
         return id;
@@ -113,10 +123,10 @@ public class Item {
         return houseType;
     }
 
-    public String getHouseType4Search() {
-        // "楼层 | 几室几厅 - 面积"
-        return info.get("level") + " | " + info.get("type") + " - " + houseType;
-    }
+//    public String getHouseType4Search() {
+//        // "楼层 | 几室几厅 - 面积"
+//        return info.get("level") + " | " + info.get("type") + " - " + houseType;
+//    }
 
     public void setHouseType(String houseType) {
         this.houseType = houseType;

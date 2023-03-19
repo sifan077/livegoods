@@ -42,6 +42,12 @@ spring:
             - Path=/comment
             - Query=id
             - Query=page
+        - id: buytime
+          uri: lb://LIVEGOODS-BUYACTION
+          predicates:
+            - Path=/buytime
+            - Query=id
+
 
 
 eureka:

@@ -7,18 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="livegoods_recommedation" />
         <module name="livegoods_search" />
-        <module name="livegoods_details" />
         <module name="livegoods_banner" />
         <module name="livegoods_comment" />
-        <module name="livegoods_mongodb_dao" />
         <module name="livegoods_cache_redis" />
-        <module name="livegoods_pojo" />
         <module name="livegoods_product" />
         <module name="livegoods_eureka" />
-        <module name="livegoods_commons" />
         <module name="livegoods_gateway" />
+        <module name="livegoods_recommedation" />
+        <module name="livegoods_details" />
+        <module name="livegoods_buyaction" />
+        <module name="livegoods_mongodb_dao" />
+        <module name="livegoods_pojo" />
+        <module name="livegoods_commons" />
       </profile>
     </annotationProcessing>
   </component>
