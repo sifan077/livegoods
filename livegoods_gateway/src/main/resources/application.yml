@@ -32,22 +32,29 @@ spring:
             - Query=page
             - Query=content
         - id: details
-          uri: lb://LIVEGOODS-DETAILS
+          uri: lb://livegoods-details
           predicates:
             - Path=/details
             - Query=id
         - id: comment
-          uri: lb://LIVEGOODS-COMMENT
+          uri: lb://livegoods-comment
           predicates:
             - Path=/comment
             - Query=id
             - Query=page
         - id: buytime
-          uri: lb://LIVEGOODS-BUYACTION
+          uri: lb://livegoods-buyaction
           predicates:
             - Path=/buytime
             - Query=id
-
+        - id: sendyzm
+          uri: lb://livegoods-login
+          predicates:
+            - Path=/sendyzm
+        - id: login
+          uri: lb://livegoods-login
+          predicates:
+            - Path=/login
 
 
 eureka:
