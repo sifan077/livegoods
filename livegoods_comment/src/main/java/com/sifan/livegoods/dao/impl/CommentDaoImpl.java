@@ -40,4 +40,11 @@ public class CommentDaoImpl implements CommentDao {
         long count = Long.parseLong(result.getUniqueMappedResult().get("count").toString());
         return count;
     }
+
+    // 新增商品评论
+    @Override
+    public void save(Comment comment) {
+        mongoTemplate.save(comment);
+    }
+
 }

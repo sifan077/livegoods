@@ -11,4 +11,7 @@ public interface CommentDao {
     List<Comment> findCommentsByPage(Query query);
     // 查询评论数量
     long countByQuery(String itemId);
+    // 新增评论
+    void save(Comment comment);
+
 }

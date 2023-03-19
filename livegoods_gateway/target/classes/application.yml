@@ -59,9 +59,15 @@ spring:
           uri: lb://livegoods-buyaction
           predicates:
             - Path=/buyaction
-
-
-
+        - id: order
+          uri: lb://livegoods-order
+          predicates:
+            - Path=/order
+            - Query=user
+        - id: feelback
+          uri: lb://livegoods-comment
+          predicates:
+            - Path=/feelback
 eureka:
   client:
     service-url:

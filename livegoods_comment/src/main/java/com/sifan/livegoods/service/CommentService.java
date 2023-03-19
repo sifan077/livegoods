@@ -6,4 +6,7 @@ import com.sfian.livegoods.vo.LivegoodsResult;
 public interface CommentService {
     // 根据商品主键，查询商品评论
     LivegoodsResult findCommentByItemId(String itemId, int page, int rows);
+    // 新增商品评论
+    LivegoodsResult fellback(String orderId, String comment);
+
 }

@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="livegoods_search" />
+        <module name="livegoods_order" />
         <module name="livegoods_login" />
         <module name="livegoods_banner" />
         <module name="livegoods_comment" />
@@ -26,8 +27,5 @@
         <module name="livegoods_commons" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="livegoods_order" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -2,7 +2,9 @@ package com.sifan.livegoods.service.impl;
 
 import com.sfian.livegoods.vo.LivegoodsResult;
 import com.sifan.livegoods.dao.CommentDao;
+import com.sifan.livegoods.dao.OrderDao;
 import com.sifan.livegoods.pojo.Comment;
+import com.sifan.livegoods.pojo.Order;
 import com.sifan.livegoods.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -17,6 +19,8 @@ import java.util.List;
 public class CommentServiceImpl implements CommentService {
     @Autowired
     private CommentDao commentDao;
+    @Autowired
+    private OrderDao orderDao;
 
     /**
      * 分页查询商品评论信息，查询条件是商品的主键。
@@ -56,4 +60,36 @@ public class CommentServiceImpl implements CommentService {
         }
         return result;
     }
+
+    /**
+     * 新增商品评论
+     * @param orderId 订单主键
+     * @param comment 评论内容
+     * @return
+     */
+    @Override
+    public LivegoodsResult fellback(String orderId, String comment) {
+        try {
+            // 根据订单主键，查询订单数据
+            Order order = orderDao.findById(orderId);
+
+            // 根据查询的订单数据内容，创建一个评论数据对象Comment
+            Comment commentObj = new Comment();
+            commentObj.setUsername(order.getUsername());
+            commentObj.setComment(comment);
+            commentObj.setItemId(order.getItemId());
+            commentObj.setStar(3); // 前端应用未提供星级请求参数。 赋予默认值 3。
+
+            // 保存数据到MongoDB
+            commentDao.save(commentObj);
+            // 修改订单状态， commentState = 2， 设置为已评论
+            orderDao.updateCommentState(orderId, 2);
+
+            return LivegoodsResult.ok();
+        }catch (Exception e){
+            e.printStackTrace();
+            return LivegoodsResult.error();
+        }
+    }
+
 }

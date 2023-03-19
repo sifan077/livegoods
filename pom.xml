@@ -25,6 +25,7 @@
         <module>livegoods_rabbit_publisher</module>
         <module>livegoods_buyaction</module>
         <module>livegoods_buyaction_message_consumer</module>
+        <module>livegoods_order</module>
     </modules>
 
     <properties>
@@ -32,7 +33,6 @@
         <maven.compiler.target>8</maven.compiler.target>
         <spring-boot-version>2.7.4</spring-boot-version>
         <cloud-version>2021.0.1</cloud-version>
-        <lcn-version>5.0.2.RELEASE</lcn-version>
         <commons-lang-version>3.12.0</commons-lang-version>
 <!--        <lombok-version>1.8.24</lombok-version>-->
         <mysql-version>8.0.28</mysql-version>
@@ -63,23 +63,6 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang-version}</version>
-            </dependency>
-            <!-- lcn 事务管理器  -->
-            <dependency>
-                <groupId>com.codingapi.txlcn</groupId>
-                <artifactId>txlcn-tm</artifactId>
-                <version>${lcn-version}</version>
-            </dependency>
-            <!-- lcn 客户端-->
-            <dependency>
-                <groupId>com.codingapi.txlcn</groupId>
-                <artifactId>txlcn-tc</artifactId>
-                <version>${lcn-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.codingapi.txlcn</groupId>
-                <artifactId>txlcn-txmsg-netty</artifactId>
-                <version>${lcn-version}</version>
             </dependency>
             <dependency>
                 <groupId>mysql</groupId>
@@ -113,11 +96,6 @@
                             </goals>
                         </execution>
                     </executions>
-                </plugin>
-                <plugin>
-                    <groupId>com.spotify</groupId>
-                    <artifactId>docker-maven-plugin</artifactId>
-                    <version>1.2.2</version>
                 </plugin>
             </plugins>
         </pluginManagement>
