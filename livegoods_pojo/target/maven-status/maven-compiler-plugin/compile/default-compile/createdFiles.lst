@@ -1,1 +1,7 @@
-com\sifan\livegoods\pojo\Banner.class
+com/sifan/livegoods/pojo/HouseType4Search.class
+com/sifan/livegoods/pojo/Order.class
+com/sifan/livegoods/pojo/Comment.class
+com/sifan/livegoods/pojo/LoginLog.class
+com/sifan/livegoods/pojo/ValidateCode.class
+com/sifan/livegoods/pojo/Banner.class
+com/sifan/livegoods/pojo/Item.class
